@@ -1,0 +1,27 @@
+# calculator.py
+# Addition
+def add(a, b):
+    return a + b
+# Subtraction
+def subtract(a, b):
+    return a - b
+# Multiplication
+def multiplication(a, b):
+    return a * b
+# Division with error when 0 is inputted
+def division(a, b):
+    if b == 0:
+        raise ValueError("Division by zero is not allowed.")
+    return a / b
+if __name__ == "__main__":
+    try:
+        x = float(input("Enter first number: "))
+        y = float(input("Enter second number: "))
+        print(f"Addition: {add(x, y)}")
+        print(f"Subtraction: {subtract(x, y)}")
+        print(f"Multiplication: {multiplication(x, y)}")
+        print(f"Division: {division(x, y)}")
+    except ValueError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
