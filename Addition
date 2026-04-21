@@ -1,9 +1,23 @@
 import random
-
+import time
 print("Welcome to Addition Practice!")
 print("Type 'q' to quit.\n")
+start_time = time.time()
+time_limit = 300  # 5 minutes
 
 while True:
+    elapsed = time.time() - start_time
+    remaining = int(time_limit - elapsed)
+
+    if remaining <= 0:
+        print("\nTime's up! ⏰")
+        break
+
+    # format as MM:SS
+    minutes = remaining // 60
+    seconds = remaining % 60
+    print(f"Time left: {minutes:02d}:{seconds:02d}")
+
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)
 
@@ -12,7 +26,14 @@ while True:
     if answer.lower() == 'q':
         print("Goodbye!")
         break
+
+    if not answer.isdigit():
+        print("Please enter a number.\n")
+        continue
+
     if int(answer) == num1 + num2:
         print("Correct!\n")
     else:
         print(f"Wrong. The correct answer is {num1 + num2}.\n")
+
+
