@@ -1,0 +1,30 @@
+import os
+def main():
+    while True:
+        print("\nChoose an option:")
+        print("1 - calculator.py")
+        print("2 - addition.py")
+        print("3 - subtraction.py")
+        print("4 - multiplication.py")
+        print("5 - division.py")
+        print("6 - quit")
+        choice = input("Enter your choice (1-6): ")
+
+        if choice == "1":
+            os.system("python calculator.py")
+        elif choice == "2":
+            os.system("python addition.py")
+        elif choice == "3":
+            os.system("python subtraction.py")
+        elif choice == "4":
+            os.system("python multiplication.py")
+        elif choice == "5":
+            os.system("python division.py")
+        elif choice == "6":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice, try again.")
+
+if __name__ == "__main__":
+    main()
