@@ -1,4 +1,7 @@
-def division(self
-  a=random.randint(1,100)
-  b=random.randint(1,100)
-  print("Divide", a, "and", b
+import random
+
+def division(self):
+    print("Welcome to division practice")
+    a = random.randint(1, 100)
+    b = random.randint(1, 100)
+    print("Divide", a, "and", b)
